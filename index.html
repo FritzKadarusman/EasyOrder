@@ -17,11 +17,12 @@
             window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_self ', 'location=no, toolbar=no');
         }      
     
-        function onDeviceReady() {
-            document.addEventListener("backbutton", function (e) {
-                 e.preventDefault();
-             }, false );
-        }    
+        document.addEventListener("backbutton", onBackKeyDown, false);
+        function onBackKeyDown(e) {
+          e.preventDefault();
+        }
+   
+  
     
 </script>        
         <!--    
