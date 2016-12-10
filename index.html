@@ -8,12 +8,21 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     </head>
     <body>   
-        <!-- <script type="text/javascript"> 
-            
- window.location="http://ws.servehttp.com:8077/vc/easyorder.dll/m";           
-            
+        
+<script type="text/javascript">          
+var ref = window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank', 'location=no');
+
+// attach listener to loadstart
+ref.addEventListener('loadstart', function(event) { 
+    var urlSuccessPage = "http://ws.servehttp.com:8077/vc/easyorder.dll/m";
+    if (event.url == urlSuccessPage) {
+    ref.close();    
+    }
+});        
+ </script>        
+        <!--    
+ window.location="http://ws.servehttp.com:8077/vc/easyorder.dll/m";       
  window.location.replace("http://ws.servehttp.com:8077/vc/easyorder.dll/m");
-            
-        </script> -->
+       -->
     </body>
 </html>
