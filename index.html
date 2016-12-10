@@ -9,7 +9,15 @@
     </head>
     <body>   
         
-<script type="text/javascript">          
+<script type="text/javascript" src="cordova.js"></script>        
+<script type="text/javascript" charset="utf-8">         
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        function onDeviceReady() {
+            window.location.href = 'http://ws.servehttp.com:8077/vc/easyorder.dll/m';
+        }      
+</script>        
+        <!--    
 var ref = window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank', 'location=no, enableViewportScale=yes');
 
 // attach listener to loadstart
@@ -18,9 +26,9 @@ ref.addEventListener('loadstart', function(event) {
     if (event.url == urlSuccessPage) {
     ref.close();    
     }
-});        
- </script>        
-        <!--    
+});  
+
+
  window.location="http://ws.servehttp.com:8077/vc/easyorder.dll/m";       
  window.location.replace("http://ws.servehttp.com:8077/vc/easyorder.dll/m");
        -->
