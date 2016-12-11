@@ -88,7 +88,10 @@
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
     -->
 	
-    <preference name="AutoHideSplashScreen" value="true"/>	
+    <preference name="AutoHideSplashScreen" value="false"/>	
+    <preference name="SplashScreenDelay" value="1" />
+    <!-- <preference name="SplashMaintainAspectRatio" value="true|false" /> -->
+    <preference name="SplashShowOnlyFirstTime" value="true" />	
     <!-- Define app splash screen for each platform. -->
     <!--
     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
