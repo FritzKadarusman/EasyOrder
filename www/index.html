@@ -15,17 +15,12 @@
 	    document.addEventListener("deviceready", onDeviceReady, false); 
 		
 	    function onDeviceReady() {
-	    window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no');
-
+	    //window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no');
+	    cordova.InAppBrowser.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no,hardwareback=no');
 	    
 	    }   
 		
-		document.addEventListener("backbutton", backKeyDown, true); 
-function backKeyDown() { 
-     // Call my back key code here.
-     alert('go back!');
-}	
-					
+				
 			   
 		</script>     	    
     </body>
