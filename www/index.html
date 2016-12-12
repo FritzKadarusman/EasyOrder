@@ -16,19 +16,18 @@
 		
 		function onDeviceReady() {
 		  window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no');
+ 		  document.addEventListener("backbutton", onBackKeyDown, false); //Listen to the User clicking on the back button	
 		}   
 		
-		function init() {
-   		document.addEventListener("deviceready", onDR, false);
-		} 
-		function onDR(){
-		    document.addEventListener("backbutton", backKeyDown, true);
-		    //boot your app...
-		}
-		function backKeyDown() { 
-		    // do something here if you wish
-		    // alert('go back!');
-		}		   
+		
+		function onConfirm(button) {
+		    if(button==2){//If User selected No, then we just do nothing
+			return;
+		    }else{
+			navigator.app.exitApp();// Otherwise we quit the app.
+		    }
+		}		
+			   
 		</script>     	    
     </body>
 </html>
