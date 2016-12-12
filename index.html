@@ -12,25 +12,24 @@
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>          
 	<script type="text/javascript" charset="utf-8">        
 		  document.addEventListener("deviceready", onDeviceReady, false); 
-		
 		  function onDeviceReady() {
 			 window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no, hardwareback=no');
 		  }      
-	 </script>        
-        <!--    
-var ref = window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank', 'location=no, enableViewportScale=yes');
+	</script>      
+	    
+	<!--    
+	var ref = window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank', 'location=no, enableViewportScale=yes');
+	// attach listener to loadstart
+	ref.addEventListener('loadstart', function(event) { 
+	    var urlSuccessPage = "http://ws.servehttp.com:8077/vc/easyorder.dll/m";
+	    if (event.url == urlSuccessPage) {
+	    ref.close();    
+	    }
+	});  
 
-// attach listener to loadstart
-ref.addEventListener('loadstart', function(event) { 
-    var urlSuccessPage = "http://ws.servehttp.com:8077/vc/easyorder.dll/m";
-    if (event.url == urlSuccessPage) {
-    ref.close();    
-    }
-});  
-
-
- window.location="http://ws.servehttp.com:8077/vc/easyorder.dll/m";       
- window.location.replace("http://ws.servehttp.com:8077/vc/easyorder.dll/m");
-       -->
+	window.location="http://ws.servehttp.com:8077/vc/easyorder.dll/m";       
+	window.location.replace("http://ws.servehttp.com:8077/vc/easyorder.dll/m");
+	-->
+	    
     </body>
 </html>
