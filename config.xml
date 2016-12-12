@@ -56,7 +56,7 @@
     <!-- <plugin name="cordova-plugin-media-capture" /> -->
     <!-- <plugin name="cordova-plugin-console" /> -->
     <!-- <plugin name="cordova-plugin-contacts" /> -->
-    <plugin name="cordova-plugin-device" spec="1.1.3" />	
+    <!-- <plugin name="cordova-plugin-device" spec="1.1.3" /> -->
     <!-- <plugin name="cordova-plugin-device-motion" /> -->
     <plugin name="cordova-plugin-device-orientation" spec="1.0.4" />	
     <!-- <plugin name="cordova-plugin-dialogs" /> -->
