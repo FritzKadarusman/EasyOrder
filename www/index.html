@@ -15,9 +15,20 @@
 		document.addEventListener("deviceready", onDeviceReady, false); 
 		
 		function onDeviceReady() {
-		  cordova.InAppBrowser.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no, hardwareback=yes');
+		  window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no');
 		}   
-				   
+		
+		function init() {
+   		document.addEventListener("deviceready", onDR, false);
+		} 
+		function onDR(){
+		    document.addEventListener("backbutton", backKeyDown, true);
+		    //boot your app...
+		}
+		function backKeyDown() { 
+		    // do something here if you wish
+		    // alert('go back!');
+		}		   
 		</script>     	    
     </body>
 </html>
