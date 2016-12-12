@@ -9,27 +9,33 @@
     </head>
     <body>   
         
-		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>   
-		<script type="text/javascript" src="js/index.js"></script>	
-		<script type="text/javascript" charset="utf-8">        
-			document.addEventListener("deviceready", onDeviceReady, false); 
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>   
+	<script type="text/javascript" src="js/index.js"></script>	
+	<script type="text/javascript" charset="utf-8">        
 		
-			<!--
-			function onDeviceReady() {
-				window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no, hardwareback=no');
-			}      
-			-->   
-	        function onDeviceReady() {
-				var ref = window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank', 'location=no,');
-				ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
-				ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
-				ref.addEventListener('exit', function() { alert(event.type); });
+		document.addEventListener("deviceready", onDeviceReady, false); 
+		
+		<!--
+		function onDeviceReady() {
+			window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no, hardwareback=no');
+		}      
+		-->   
+	    	<!--
+		function onDeviceReady() {
+			var ref = window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank', 'location=no,');
+			ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+			ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+			ref.addEventListener('exit', function() { alert(event.type); });
     		}
+		-->  
 		
-			<!-- 
-			window.location="http://ws.servehttp.com:8077/vc/easyorder.dll/m";       
+		function onDeviceReady() {
 			window.location.replace("http://ws.servehttp.com:8077/vc/easyorder.dll/m");
-			-->
+		}
+		
+		<!--
+		window.location="http://ws.servehttp.com:8077/vc/easyorder.dll/m";
+		-->
 		</script>     	    
     </body>
 </html>
