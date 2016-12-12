@@ -15,22 +15,9 @@
 		document.addEventListener("deviceready", onDeviceReady, false); 
 		
 		function onDeviceReady() {
-			window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no, hardwareback=no');
+			window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no, hardwareback=yes');
 		}   
-		
-		function onDeviceReady(){
-		    document.addEventListener("backbutton", function(e){
-		       if($.mobile.activePage.is('#homepage')){
-			   e.preventDefault();
-			   navigator.app.exitApp();
-		       }
-		       else {
-			   navigator.app.backHistory()
-		       }
-		    }, false);
-		}		
-		
-		   
+				   
 	    	<!--
 		function onDeviceReady() {
 			var ref = window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank', 'location=no,');
