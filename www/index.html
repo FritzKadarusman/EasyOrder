@@ -18,33 +18,11 @@
 	    //window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no');
 	    //cordova.InAppBrowser.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no,hardwareback=no');
 		    
-	       var ref = window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no,hardwareback=yes');    
-		//ref.addEventListener('exit', function() {
-		//    navigator.app.exitApp();
-		//});		    
-		document.addEventListener("exit", onBackKeyDown, false);
-
+	       var ref = cordova.InAppBrowser.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no,hardwareback=yes');    
+		   ref.addEventListener('exit', function() {
+		   navigator.app.exitApp();
+	       });		    
 	    }   
-		
-		function onBackKeyDown() {// Handle the back button
-		    navigator.notification.confirm(
-			    'Are you certain2',  // message
-			    function( index ){
-				if( index == 1 ){//look at the docs for this part
-				    navigator.app.exitApp();
-				}
-			    },              // callback to invoke with index of button pressed
-			    'Exit',            // title
-			    'Yes,No'          // buttonLabels
-			);
-		}	
-	document.addEventListener("deviceready", onDeviceReady, false);	
-	    //function onBackKeyDown(e) {
-		//   e.preventDefault();
-		//   alert('Back Button is Pressed!');	    
-	    //}	   
-
-	    
 	  </script>     	    
     </body>
 </html>
