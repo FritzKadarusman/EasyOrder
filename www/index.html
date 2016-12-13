@@ -23,16 +23,25 @@
 		//    navigator.app.exitApp();
 		//});		    
 	    //document.addEventListener("backbutton", onBackKeyDown, false);
-    		document.addEventListener("backbutton", function(e) {
-		   e.preventDefault();
-		   alert('Back Button is Pressed2!');	  
-		   navigator.app.backhistory();	
-		}			, true);
+		ref.addEventListener('exit', function() {
+			 onConfirm();
+		});	
 	    }   
+		
+       	    function onConfirm(button) {
+	        if (button == 1){ //Yes button pressed...
+		    navigator.app.exitApp();
+	        } else{
+	          return false;
+	        }
+	    }		
+		
 	    //function onBackKeyDown(e) {
 		//   e.preventDefault();
 		//   alert('Back Button is Pressed!');	    
 	    //}	   
-		</script>     	    
+
+	    
+	  </script>     	    
     </body>
 </html>
