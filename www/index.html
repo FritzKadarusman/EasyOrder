@@ -22,7 +22,7 @@
 		//ref.addEventListener('exit', function() {
 		//    navigator.app.exitApp();
 		//});		    
-	       document.addEventListener("backbutton", function(e) {
+	       ref.addEventListener("backbutton", function(e) {
 	           e.preventDefault();
 		   navigator.notification.confirm("Exit ?", onConfirmExit, "Confirmation", "Yes,No");
 	       },false); 
