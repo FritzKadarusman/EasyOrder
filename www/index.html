@@ -22,21 +22,23 @@
 		//ref.addEventListener('exit', function() {
 		//    navigator.app.exitApp();
 		//});		    
-	       ref.addEventListener("exit", function(e) {
-	           e.preventDefault();
-		   navigator.notification.confirm("Exit ?", onConfirmExit, "Confirmation", "Yes,No");
-	       },false); 
+		document.addEventListener("backbutton", onBackKeyDown, false);
 
 	    }   
 		
-       	    function onConfirm(button) {
-	        if (button == 1){ //Yes button pressed...
-		    navigator.app.exitApp();
-	        } else{
-	          return false;
-	        }
-	    }		
-		
+		function onBackKeyDown() {// Handle the back button
+		    navigator.notification.confirm(
+			    'Are you certain you want to close the app?',  // message
+			    function( index ){
+				if( index == 1 ){//look at the docs for this part
+				    navigator.app.exitApp();
+				}
+			    },              // callback to invoke with index of button pressed
+			    'Exit',            // title
+			    'Yes,No'          // buttonLabels
+			);
+		}	
+	document.addEventListener("deviceready", onDeviceReady, false);	
 	    //function onBackKeyDown(e) {
 		//   e.preventDefault();
 		//   alert('Back Button is Pressed!');	    
