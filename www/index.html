@@ -22,13 +22,17 @@
 		//ref.addEventListener('exit', function() {
 		//    navigator.app.exitApp();
 		//});		    
-	    document.addEventListener("backbutton", onBackKeyDown, false);
-    
+	    //document.addEventListener("backbutton", onBackKeyDown, false);
+    		document.addEventListener("backbutton", function(e) {
+		   e.preventDefault();
+		   alert('Back Button is Pressed!');	  
+		   navigator.app.backhistory();	
+		}			, true);
 	    }   
-    function onBackKeyDown(e) {
-	   e.preventDefault();
-	   alert('Back Button is Pressed!');	    
-    }	   
+	    //function onBackKeyDown(e) {
+		//   e.preventDefault();
+		//   alert('Back Button is Pressed!');	    
+	    //}	   
 		</script>     	    
     </body>
 </html>
