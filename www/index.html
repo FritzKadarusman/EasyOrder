@@ -22,13 +22,13 @@
 		//ref.addEventListener('exit', function() {
 		//    navigator.app.exitApp();
 		//});		    
-		document.addEventListener("backbutton", onBackKeyDown, false);
+		ref.addEventListener("backbutton", onBackKeyDown, false);
 
 	    }   
 		
 		function onBackKeyDown() {// Handle the back button
 		    navigator.notification.confirm(
-			    'Are you certain you want to close the app?',  // message
+			    'Are you certain2',  // message
 			    function( index ){
 				if( index == 1 ){//look at the docs for this part
 				    navigator.app.exitApp();
