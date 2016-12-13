@@ -19,12 +19,22 @@
 	    //cordova.InAppBrowser.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no,hardwareback=no');
 	    
 	    var ref = window.open('http://ws.servehttp.com:8077/vc/easyorder.dll/m', '_blank ', 'location=no');    
-		ref.addEventListener('exit', function() {
-		    navigator.app.exitApp();
-		});	
+		//ref.addEventListener('exit', function() {
+		//    navigator.app.exitApp();
+		//});	
 		    
 		
-		    
+		ref.addEventListener('exit', function() {
+			
+			
+	function onConfirm(button) {
+    if(button==2){//If User selected No, then we just do nothing
+        return;
+    }else{
+        navigator.app.exitApp();// Otherwise we quit the app.
+    }
+}
+		});	    
 		    
 		    
 	    }   
